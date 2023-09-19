@@ -25,10 +25,15 @@ if (bytes == 0)
 
 command[bytes - 1] = '\0';
 
+<<<<<<< HEAD
 if (strlen(command) > 0)
 {
 	execute(command);
 }
 }
 return 0;
+=======
+		waitpid(child_pid, &status, 0);
+	}
+>>>>>>> 777a7176c7ae280753ff3fa3f0bdd6078c2f0c51
 }
