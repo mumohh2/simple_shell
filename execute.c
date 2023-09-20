@@ -1,9 +1,10 @@
 #include "shell.h"
 
 /**
- * execute - Executes the command with arguments
- * @argv: An array of strings containing the command and its arguments
- * Return: The exit status of the executed command
+ * execute - Execute a command with arguments.
+ * @argv: An array of strings containing the command and its arguments.
+ *
+ * Return: The exit status of the executed command.
  */
 int execute(char **argv)
 {
@@ -12,7 +13,6 @@ int execute(char **argv)
 	char *cmd_path, *envp[2];
 
 	if (argv == NULL || *argv == NULL)
-
 		return (status);
 	if (check_for_builtin(argv))
 		return (status);
