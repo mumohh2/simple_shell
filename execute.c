@@ -20,7 +20,7 @@ int execute(char **argv)
 	id = fork();
 	if (id < 0)
 	{
-		_puterror("fork");
+		_perror("fork");
 		return (1);
 	}
 	if (id == -1)
@@ -31,7 +31,7 @@ int execute(char **argv)
 		envp[1] = NULL;
 		cmd_path = NULL;
 		if (argv[0][0] != '/')
-			cmd_path = find_in_path(argv[0]);
+			cmd_path = find_path(argv[0]);
 		if (cmd_path == NULL)
 			cmd_path = argv[0];
 		if (execve(cmd_path, argv, envp) == -1)

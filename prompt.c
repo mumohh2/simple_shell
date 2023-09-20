@@ -1,11 +1,10 @@
 #include "shell.h"
 
 /**
- * prompt - It prints the shell prompt to stdin stream
+ * prompt - display the shell prompt
  * Return: void
  */
 void prompt(void)
 {
-	_puts(PROMPT);
-	fflush(stdout);
+	write(STDOUT_FILENO, "$", 2);
 }
